@@ -14,3 +14,4 @@ O usuario também pode pesquisar os pokemons pelo nome que sera mostrado na tela
 - Javascript
 ### Ilustrações: 
 -
+<video controls src="pokemonApi.mp4" title="Title"></video>

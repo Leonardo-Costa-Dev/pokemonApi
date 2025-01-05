@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+body {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+/* themeButton.js */
+
+.cabecalho {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  height: 100px;
+}
+
+.cabecalho h1 {
+  font-size: 5rem;
+}
+
+.cabecalho img {
+  width: 200px;
+}
+
+.input {
+  text-align: center;
+  max-width: 180px;
+  padding: 5px;
+  background-color: hwb(241 3% 50%);
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  font-size: 15px;
+  color: #fff;
+}
+
+.input::placeholder{
+  color: #fff;
+}
+
+.btnHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color:  hwb(241 3% 50%);
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.btnHeader a {
+  color: #fff;
+}
+
+.btnHeader:hover,
+.btnHeader a:hover {
+  transform: scale(1.1);
+  transition: 0.6s;
+  background-color: #2b2b2a;
+}
+
+.start{
+  width: 68px;
+  height: 30px;
+  background-color:  hwb(241 3% 50%);
+  border-radius: 15px;
+}
+
+.switch {
+  position: relative;
+  width: 3.5rem;
+  height: 2rem;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+ 
+}
+
+.slider::before{
+  position: absolute;
+  content: "";
+  height: 1.4rem;
+  width: 1.4rem;
+  left: 0.25rem;
+  transform: translate(150%, 18%);
+  border-radius: 15px;
+  -webkit-transition: 0.4s;
+  background: linear-gradient(30deg, #ffbb00, #ff8c00 70%);
+  transition: 0.4s;
+}
+
+.input:checked + .slider{
+  background-color: #222427;
+}
+
+input:checked + .slider::before {
+  left: calc(100% - 1.7rem);
+  background-color: #222427;
+  box-shadow: inset -3px -2px 5px -2px #8983f7,
+              inset -10px -4px 0 0 #a3dafb;
+}
+
+/* listPokemon.js */
+.sectionPokemon {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+.listPokemon {
+  width: 93%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.conteiner-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: auto;
+  max-width: 1020px;
+  height: 500px;
+  padding: 20px;
+  overflow-y: auto; 
+  scrollbar-width: none; 
+}
+
+.conteiner-list::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem no Chrome, Safari e Edge */
+}
+
+
+.conteiner-list li {
+  width: 180px;
+  border-radius: 5px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 5px 5px 10px #0516af;
+  cursor: pointer;
+}
+
+.conteiner-list li h3 {
+  color: #000;
+}
+
+.conteiner-list li img {
+  border-radius: 100px;
+  padding: 5px;
+  width: 80%;
+  background-color: #fff;
+}
+
+.conteiner-list:hover > :not(:hover) {
+  transform: scale(0.9);
+  opacity: .8;
+  transition: 0.8s;
+}
+
+.tipo {
+  font-weight: 800;
+}
+
+/* button.js */
+.btn {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color:  hwb(241 3% 50%);
+  border: none;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.btn button:hover {
+  transform: scale(1.1);
+  transition: 0.6s;
+  background-color: #2b2b2a;
+}
+
+/* CardPkemon */
+
+.sectionCard {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.cabecalhoCard {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cabecalhoCard img {
+  width: 180px;
+  height: auto;
+}
+
+
+.CardPokemon {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding-bottom: 10px;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:  #cccccc96;
+  border-radius: 15px 15px 0 0 ;
+  gap: 10px;
+}
+
+.pokemon img {
+  max-width: 15%;
+  padding: 5px;
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100px;
+  gap: 20px;
+}
+
+.stat-bar {
+  flex-wrap: wrap;
+  width: 170px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #f3f3f3c0;
+  border-radius: 10px;
+  height: 10px;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+
+.attribute {
+   width: 100%;
+   height: auto;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #cccccc96;
+}
+
+.attBtn {
+  display: flex;
+  gap: 30px;
+}
+
+.attributeBtn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.8s;
+  font-size: 12px;
+}
+
+.attributeBtn:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 2px 3px #0745ca;
+}
+
+.listAttribute {
+  width: 60%;
+  height: 200px;
+  background-color: #cccccc6e;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto; 
+  scrollbar-width: none; 
+}
+
+.listAttribute::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1124px) {
+
+  .input {
+    text-align: center;
+    max-width: 100px;
+    font-size: 13px;
+  }
+  
+  .conteiner-list {
+    width: 100%;
+    height: 60%;
+  }
+
+  .conteiner-list li {
+    width: 150px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+
+  .attribute {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .listAttribute {
+    width: 55%;
+    height: 200px;
+  }
+
+  .btn button {
+    font-size: 13px;
+  }
+
+  .CardPokemon {
+    width: 90%;
+  }
+
+  .pokemon {
+   height: 700px;
+  }
+
+  .attributeBtn {
+    font-size: 13px;
+    height: 55px;
+  }
+
+  .listAttribute {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .input {
+    text-align: center;
+    max-width: 100px;
+    font-size: 13px;
+  }
+  
+  .conteiner-list {
+    width: 100%;
+    height: 60%;
+  }
+
+  .conteiner-list li {
+    width: 110px;
+    border-radius: 5px;
+    font-size: 8px;
+  }
+
+  .attribute {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .listAttribute {
+    width: 55%;
+    height: 200px;
+  }
+
+  .btn button {
+    font-size: 13px;
+  }
+
+  .CardPokemon {
+    width: 90%;
+  }
+
+  .pokemon {
+   height: 700px;
+  }
+
+  .attBtn {
+    padding: 5px;
+  }
+
+  .attributeBtn {
+    font-size: 13px;
+    height: auto;
+  }
+
+  .listAttribute {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 426px) {
+
+ .cabecalho img {
+  width: 100px;
+ } 
+
+ .slider::before{
+  left: 0.20rem;
+}
+ 
+ .conteiner-list {
+   width: 100%;
+   height: 60%;
+ }
+
+ .attributeBtn {
+  font-size: 10px;
+  height: auto;
+}
+
+}
+
+@media (max-width: 400px) {
+  .stat-bar {
+    width: 100px;
+    font-size: 10px;
+  }
+
+  .attributeBtn {
+    font-size: 9px;
+    height: auto;
+  }
+ }
